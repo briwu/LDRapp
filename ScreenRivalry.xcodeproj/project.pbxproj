@@ -28,7 +28,7 @@
 		FA41C6992C326C96006BF90E /* StartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C6982C326C96006BF90E /* StartPageView.swift */; };
 		FA41C69B2C326CAA006BF90E /* SessionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C69A2C326CAA006BF90E /* SessionSelectionView.swift */; };
 		FA41C69D2C326CC7006BF90E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C69C2C326CC7006BF90E /* MainTabView.swift */; };
-		FA41C69F2C32723F006BF90E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA41C69E2C32723F006BF90E /* GoogleService-Info.plist */; };
+		FA9B523B2C32745B00B2730A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA41C69E2C32723F006BF90E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -371,6 +371,7 @@
 			files = (
 				FA41C6522C3265C1006BF90E /* Preview Assets.xcassets in Resources */,
 				FA41C64F2C3265C1006BF90E /* Assets.xcassets in Resources */,
+				FA9B523B2C32745B00B2730A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA41C69F2C32723F006BF90E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
