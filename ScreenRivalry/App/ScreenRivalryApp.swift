@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-
+import Firebase
 import FirebaseCore
-
-
+/*
 class AppDelegate: NSObject, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
@@ -21,31 +20,22 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     return true
 
   }
-
 }
-
+ */
 
 @main
-
 struct ScreenRivalryApp: App {
-
-  // register app delegate for Firebase setup
-
-  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-
-  var body: some Scene {
-
-    WindowGroup {
-
-      NavigationView {
-
-        ContentView()
-
-      }
-
+    //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewModel = AuthViewModel()
+    
+    init() {
+        FirebaseApp.configure()
     }
-
-  }
-
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(viewModel)
+        }
+    }
 }
