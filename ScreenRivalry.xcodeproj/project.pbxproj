@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA41C64B2C3265C0006BF90E /* ScreenRivalryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C64A2C3265C0006BF90E /* ScreenRivalryApp.swift */; };
+		FA41C64D2C3265C0006BF90E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C64C2C3265C0006BF90E /* ContentView.swift */; };
+		FA41C64F2C3265C1006BF90E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA41C64E2C3265C1006BF90E /* Assets.xcassets */; };
+		FA41C6522C3265C1006BF90E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA41C6512C3265C1006BF90E /* Preview Assets.xcassets */; };
+		FA41C65C2C3265C1006BF90E /* ScreenRivalryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C65B2C3265C1006BF90E /* ScreenRivalryTests.swift */; };
+		FA41C6662C3265C1006BF90E /* ScreenRivalryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C6652C3265C1006BF90E /* ScreenRivalryUITests.swift */; };
+		FA41C6682C3265C1006BF90E /* ScreenRivalryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C6672C3265C1006BF90E /* ScreenRivalryUITestsLaunchTests.swift */; };
+		FA41C6762C3268ED006BF90E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA41C6752C3268ED006BF90E /* FirebaseAuth */; };
+		FA41C6782C3268ED006BF90E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FA41C6772C3268ED006BF90E /* FirebaseFirestore */; };
+		FA41C67A2C3268ED006BF90E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA41C6792C3268ED006BF90E /* FirebaseFirestoreSwift */; };
+		FA41C67C2C3268ED006BF90E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FA41C67B2C3268ED006BF90E /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA41C6582C3265C1006BF90E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA41C63F2C3265C0006BF90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA41C6462C3265C0006BF90E;
+			remoteInfo = ScreenRivalry;
+		};
+		FA41C6622C3265C1006BF90E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA41C63F2C3265C0006BF90E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA41C6462C3265C0006BF90E;
+			remoteInfo = ScreenRivalry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA41C6472C3265C0006BF90E /* ScreenRivalry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRivalry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA41C64A2C3265C0006BF90E /* ScreenRivalryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRivalryApp.swift; sourceTree = "<group>"; };
+		FA41C64C2C3265C0006BF90E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA41C64E2C3265C1006BF90E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA41C6512C3265C1006BF90E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA41C6572C3265C1006BF90E /* ScreenRivalryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenRivalryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA41C65B2C3265C1006BF90E /* ScreenRivalryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRivalryTests.swift; sourceTree = "<group>"; };
+		FA41C6612C3265C1006BF90E /* ScreenRivalryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenRivalryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA41C6652C3265C1006BF90E /* ScreenRivalryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRivalryUITests.swift; sourceTree = "<group>"; };
+		FA41C6672C3265C1006BF90E /* ScreenRivalryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRivalryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA41C6442C3265C0006BF90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41C6762C3268ED006BF90E /* FirebaseAuth in Frameworks */,
+				FA41C67C2C3268ED006BF90E /* FirebaseStorage in Frameworks */,
+				FA41C6782C3268ED006BF90E /* FirebaseFirestore in Frameworks */,
+				FA41C67A2C3268ED006BF90E /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C6542C3265C1006BF90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C65E2C3265C1006BF90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA41C63E2C3265C0006BF90E = {
+			isa = PBXGroup;
+			children = (
+				FA41C6492C3265C0006BF90E /* ScreenRivalry */,
+				FA41C65A2C3265C1006BF90E /* ScreenRivalryTests */,
+				FA41C6642C3265C1006BF90E /* ScreenRivalryUITests */,
+				FA41C6482C3265C0006BF90E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA41C6482C3265C0006BF90E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA41C6472C3265C0006BF90E /* ScreenRivalry.app */,
+				FA41C6572C3265C1006BF90E /* ScreenRivalryTests.xctest */,
+				FA41C6612C3265C1006BF90E /* ScreenRivalryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA41C6492C3265C0006BF90E /* ScreenRivalry */ = {
+			isa = PBXGroup;
+			children = (
+				FA41C64A2C3265C0006BF90E /* ScreenRivalryApp.swift */,
+				FA41C64C2C3265C0006BF90E /* ContentView.swift */,
+				FA41C64E2C3265C1006BF90E /* Assets.xcassets */,
+				FA41C6502C3265C1006BF90E /* Preview Content */,
+			);
+			path = ScreenRivalry;
+			sourceTree = "<group>";
+		};
+		FA41C6502C3265C1006BF90E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA41C6512C3265C1006BF90E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA41C65A2C3265C1006BF90E /* ScreenRivalryTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA41C65B2C3265C1006BF90E /* ScreenRivalryTests.swift */,
+			);
+			path = ScreenRivalryTests;
+			sourceTree = "<group>";
+		};
+		FA41C6642C3265C1006BF90E /* ScreenRivalryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA41C6652C3265C1006BF90E /* ScreenRivalryUITests.swift */,
+				FA41C6672C3265C1006BF90E /* ScreenRivalryUITestsLaunchTests.swift */,
+			);
+			path = ScreenRivalryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA41C6462C3265C0006BF90E /* ScreenRivalry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA41C66B2C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalry" */;
+			buildPhases = (
+				FA41C6432C3265C0006BF90E /* Sources */,
+				FA41C6442C3265C0006BF90E /* Frameworks */,
+				FA41C6452C3265C0006BF90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenRivalry;
+			packageProductDependencies = (
+				FA41C6752C3268ED006BF90E /* FirebaseAuth */,
+				FA41C6772C3268ED006BF90E /* FirebaseFirestore */,
+				FA41C6792C3268ED006BF90E /* FirebaseFirestoreSwift */,
+				FA41C67B2C3268ED006BF90E /* FirebaseStorage */,
+			);
+			productName = ScreenRivalry;
+			productReference = FA41C6472C3265C0006BF90E /* ScreenRivalry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA41C6562C3265C1006BF90E /* ScreenRivalryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA41C66E2C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalryTests" */;
+			buildPhases = (
+				FA41C6532C3265C1006BF90E /* Sources */,
+				FA41C6542C3265C1006BF90E /* Frameworks */,
+				FA41C6552C3265C1006BF90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA41C6592C3265C1006BF90E /* PBXTargetDependency */,
+			);
+			name = ScreenRivalryTests;
+			productName = ScreenRivalryTests;
+			productReference = FA41C6572C3265C1006BF90E /* ScreenRivalryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA41C6602C3265C1006BF90E /* ScreenRivalryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA41C6712C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalryUITests" */;
+			buildPhases = (
+				FA41C65D2C3265C1006BF90E /* Sources */,
+				FA41C65E2C3265C1006BF90E /* Frameworks */,
+				FA41C65F2C3265C1006BF90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA41C6632C3265C1006BF90E /* PBXTargetDependency */,
+			);
+			name = ScreenRivalryUITests;
+			productName = ScreenRivalryUITests;
+			productReference = FA41C6612C3265C1006BF90E /* ScreenRivalryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA41C63F2C3265C0006BF90E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FA41C6462C3265C0006BF90E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FA41C6562C3265C1006BF90E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FA41C6462C3265C0006BF90E;
+					};
+					FA41C6602C3265C1006BF90E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FA41C6462C3265C0006BF90E;
+					};
+				};
+			};
+			buildConfigurationList = FA41C6422C3265C0006BF90E /* Build configuration list for PBXProject "ScreenRivalry" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA41C63E2C3265C0006BF90E;
+			packageReferences = (
+				FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = FA41C6482C3265C0006BF90E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA41C6462C3265C0006BF90E /* ScreenRivalry */,
+				FA41C6562C3265C1006BF90E /* ScreenRivalryTests */,
+				FA41C6602C3265C1006BF90E /* ScreenRivalryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA41C6452C3265C0006BF90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41C6522C3265C1006BF90E /* Preview Assets.xcassets in Resources */,
+				FA41C64F2C3265C1006BF90E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C6552C3265C1006BF90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C65F2C3265C1006BF90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA41C6432C3265C0006BF90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41C64D2C3265C0006BF90E /* ContentView.swift in Sources */,
+				FA41C64B2C3265C0006BF90E /* ScreenRivalryApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C6532C3265C1006BF90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41C65C2C3265C1006BF90E /* ScreenRivalryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41C65D2C3265C1006BF90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41C6682C3265C1006BF90E /* ScreenRivalryUITestsLaunchTests.swift in Sources */,
+				FA41C6662C3265C1006BF90E /* ScreenRivalryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA41C6592C3265C1006BF90E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA41C6462C3265C0006BF90E /* ScreenRivalry */;
+			targetProxy = FA41C6582C3265C1006BF90E /* PBXContainerItemProxy */;
+		};
+		FA41C6632C3265C1006BF90E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA41C6462C3265C0006BF90E /* ScreenRivalry */;
+			targetProxy = FA41C6622C3265C1006BF90E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA41C6692C3265C1006BF90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA41C66A2C3265C1006BF90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA41C66C2C3265C1006BF90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScreenRivalry/Preview Content\"";
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA41C66D2C3265C1006BF90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScreenRivalry/Preview Content\"";
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA41C66F2C3265C1006BF90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenRivalry.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenRivalry";
+			};
+			name = Debug;
+		};
+		FA41C6702C3265C1006BF90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenRivalry.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenRivalry";
+			};
+			name = Release;
+		};
+		FA41C6722C3265C1006BF90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenRivalry;
+			};
+			name = Debug;
+		};
+		FA41C6732C3265C1006BF90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6JV5RHQ75V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Projects.ScreenRivalryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenRivalry;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA41C6422C3265C0006BF90E /* Build configuration list for PBXProject "ScreenRivalry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA41C6692C3265C1006BF90E /* Debug */,
+				FA41C66A2C3265C1006BF90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA41C66B2C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA41C66C2C3265C1006BF90E /* Debug */,
+				FA41C66D2C3265C1006BF90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA41C66E2C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA41C66F2C3265C1006BF90E /* Debug */,
+				FA41C6702C3265C1006BF90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA41C6712C3265C1006BF90E /* Build configuration list for PBXNativeTarget "ScreenRivalryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA41C6722C3265C1006BF90E /* Debug */,
+				FA41C6732C3265C1006BF90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA41C6752C3268ED006BF90E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FA41C6772C3268ED006BF90E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FA41C6792C3268ED006BF90E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		FA41C67B2C3268ED006BF90E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FA41C63F2C3265C0006BF90E /* Project object */;
+}
