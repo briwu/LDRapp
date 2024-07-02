@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         TabView {
             Text("Swiping View")
-                .tabItem { Image(systemName: "gamecontroller") }
+                .tabItem { Image(systemName: "house.fill") }
                 .tag(0)
             
             Text("Search View")
@@ -22,10 +23,11 @@ struct MainTabView: View {
                 .tabItem { Image(systemName: "bubble") }
                 .tag(2)
             
-            Text("Profile View")
+            ProfileView()
                 .tabItem { Image(systemName: "person") }
                 .tag(3)
         }
+        .tint(.primary)
     }
 }
 

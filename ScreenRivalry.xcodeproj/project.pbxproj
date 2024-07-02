@@ -29,6 +29,8 @@
 		FA41C69B2C326CAA006BF90E /* SessionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C69A2C326CAA006BF90E /* SessionSelectionView.swift */; };
 		FA41C69D2C326CC7006BF90E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41C69C2C326CC7006BF90E /* MainTabView.swift */; };
 		FA9B523B2C32745B00B2730A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA41C69E2C32723F006BF90E /* GoogleService-Info.plist */; };
+		FA9B523F2C33894800B2730A /* IndividualSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B523E2C33894800B2730A /* IndividualSessionView.swift */; };
+		FA9B52412C33895600B2730A /* DuoSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B52402C33895600B2730A /* DuoSessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		FA41C69A2C326CAA006BF90E /* SessionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSelectionView.swift; sourceTree = "<group>"; };
 		FA41C69C2C326CC7006BF90E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		FA41C69E2C32723F006BF90E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FA9B523E2C33894800B2730A /* IndividualSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualSessionView.swift; sourceTree = "<group>"; };
+		FA9B52402C33895600B2730A /* DuoSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoSessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,8 @@
 			children = (
 				FA41C6982C326C96006BF90E /* StartPageView.swift */,
 				FA41C69A2C326CAA006BF90E /* SessionSelectionView.swift */,
+				FA9B523E2C33894800B2730A /* IndividualSessionView.swift */,
+				FA9B52402C33895600B2730A /* DuoSessionView.swift */,
 			);
 			path = StartPage;
 			sourceTree = "<group>";
@@ -406,7 +412,9 @@
 				FA41C69B2C326CAA006BF90E /* SessionSelectionView.swift in Sources */,
 				FA41C68F2C326B8B006BF90E /* RegistrationView.swift in Sources */,
 				FA41C68D2C326B83006BF90E /* LoginView.swift in Sources */,
+				FA9B52412C33895600B2730A /* DuoSessionView.swift in Sources */,
 				FA41C64B2C3265C0006BF90E /* ScreenRivalryApp.swift in Sources */,
+				FA9B523F2C33894800B2730A /* IndividualSessionView.swift in Sources */,
 				FA41C69D2C326CC7006BF90E /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
