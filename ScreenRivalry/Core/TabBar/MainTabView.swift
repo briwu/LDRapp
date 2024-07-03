@@ -10,26 +10,29 @@ import SwiftUI
 struct MainTabView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
+            
         TabView {
-            Text("Swiping View")
+            StartPageView()
                 .tabItem { Image(systemName: "house.fill") }
                 .tag(0)
-            
+                
             Text("Search View")
                 .tabItem { Image(systemName: "magnifyingglass") }
                 .tag(1)
-            
+                
             Text("Inbox View")
                 .tabItem { Image(systemName: "bubble") }
                 .tag(2)
-            
+                
             ProfileView()
                 .tabItem { Image(systemName: "person") }
                 .tag(3)
         }
         .tint(.primary)
+        
     }
 }
+
 
 #Preview {
     MainTabView()

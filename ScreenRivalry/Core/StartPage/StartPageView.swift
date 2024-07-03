@@ -18,13 +18,27 @@ struct StartPageView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-                        .background(Color.blue)
+                        .background(
+                            LinearGradient(
+                                gradient: Gradient(colors: [Color(hex: "#FF5733"), Color(hex: "#C70039")]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
                         .cornerRadius(10)
                 }
 
                 Spacer()
             }
             .padding()
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color(hex: "#FF5733"), Color(hex: "#C70039")]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .edgesIgnoringSafeArea(.all)
+            )
         }
     }
 }
