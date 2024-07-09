@@ -67,6 +67,7 @@ class TimerViewModel: ObservableObject {
 
 struct IndividualSessionView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @EnvironmentObject var viewModel: AuthViewModel
     @StateObject private var timerViewModel = TimerViewModel()
     @State private var selectedDurationIndex = 0
     let countdownDurations = [5, 10, 15, 20, 25]
