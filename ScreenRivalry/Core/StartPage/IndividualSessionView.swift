@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Firebase
 
 class AppStateViewModel: ObservableObject {
     @Published var isInForeground: Bool = true
@@ -65,58 +66,99 @@ class TimerViewModel: ObservableObject {
 }
 
 
+
+
 struct IndividualSessionView: View {
+    @State private var timerDuration: Double = 0
+    @State private var timeRemaining: Double = 0
+    @State private var timer: Timer?
+    @State private var isTimerRunning = false
+    @State private var appEnteredBackground = false
     @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject private var timerViewModel = TimerViewModel()
     @State private var selectedDurationIndex = 0
     let countdownDurations = [5, 10, 15, 20, 25]
     
+    private var timerPublisher: Publishers.Autoconnect<Timer.TimerPublisher> {
+            Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+        }
+    
     var body: some View {
-        VStack {
-            Picker(selection: $selectedDurationIndex, label: Text("Select Duration")) {
-                ForEach(0..<countdownDurations.count, id: \.self) { index in
-                    Text("\(countdownDurations[index]) seconds")
+            VStack {
+                Text("Set Timer Length")
+                    .font(.headline)
+                
+                CircularSlider(value: $timerDuration, maxValue: 60, lineWidth: 20, color: .blue)
+                    .frame(width: 300, height: 300)
+                    .padding()
+                
+                Text("\(Int(timerDuration)) minutes")
+                    .font(.largeTitle)
+                
+                Button(action: startTimer) {
+                    Text(isTimerRunning ? "Restart Timer" : "Start Timer")
+                        .font(.title2)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                if isTimerRunning {
+                    Text("Time Remaining: \(Int(timeRemaining)) seconds")
+                        .font(.largeTitle)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-            
-            Text("Individual Session Timer: \(timerViewModel.timerValue)")
-                .font(.largeTitle)
-                .padding()
-
-            Button(action: {
-                let selectedDuration = countdownDurations[selectedDurationIndex]
-                timerViewModel.setCountdown(duration: selectedDuration)
-                timerViewModel.toggleTimer()
-            }) {
-                Text(timerViewModel.timer == nil ? "Start Timer" : "Stop Timer")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(8)
+            .onChange(of: scenePhase) {
+                if scenePhase == .background {
+                    appEnteredBackground = true
+                    isTimerRunning = false // Stop the timer if the app goes to the background
+                } else if scenePhase == .active && !isTimerRunning {
+                    // Optional: Handle returning to the foreground if needed
+                }
+            }
+            .onReceive(timerPublisher) { _ in
+                guard isTimerRunning else { return }
+                if timeRemaining > 0 {
+                    timeRemaining -= 1
+                } else {
+                    timerDidFinish()
+                }
             }
         }
-        .onChange(of: selectedDurationIndex) {
-            let selectedDuration = countdownDurations[selectedDurationIndex]
-            timerViewModel.setCountdown(duration: selectedDuration)
+    
+    private func startTimer() {
+        timeRemaining = timerDuration * 60
+        isTimerRunning = true
+        appEnteredBackground = false
+    }
+        
+    private func timerDidFinish() {
+        isTimerRunning = false
+        if !appEnteredBackground {
+            rewardUserWithCoins()
+        } else {
+            print("Timer failed because the app entered the background.")
         }
-        .onChange(of: scenePhase) {
-            switch scenePhase {
-            case .active:
-                break
-            case .background, .inactive:
-                timerViewModel.stopTimer()
-            @unknown default:
-                break
+    }
+    
+    private func rewardUserWithCoins() {
+        guard let currentUser = viewModel.currentUser else { return }
+        let userRef = Firestore.firestore().collection("users").document(currentUser.id)
+        
+        userRef.updateData(["coins": FieldValue.increment(Int64(10))]) { error in
+            if let error = error {
+                print("Error updating coins: \(error.localizedDescription)")
+            } else {
+                print("User rewarded with 10 coins!")
             }
-        }
-        .onAppear {
         }
     }
 }
 
 #Preview {
     IndividualSessionView()
+        .environmentObject(AuthViewModel())
 }
