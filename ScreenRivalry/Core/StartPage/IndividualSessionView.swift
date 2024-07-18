@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Firebase
+import CircularSlider
 
 class AppStateViewModel: ObservableObject {
     @Published var isInForeground: Bool = true
@@ -89,9 +90,14 @@ struct IndividualSessionView: View {
                 Text("Set Timer Length")
                     .font(.headline)
                 
-                CircularSlider(value: $timerDuration, maxValue: 60, lineWidth: 20, color: .blue)
-                    .frame(width: 300, height: 300)
-                    .padding()
+                CircularSlider(currentValue: $timerDuration,
+                               minValue: 1,
+                               maxValue: 60,
+                               knobColor: .init(red: 0.5, green: 0.5, blue: 0.5),
+                               progressLineColor: .init(red: 0.84, green: 0.93, blue: 0.09),
+                               font: .custom("HelveticaNeue-Light", size: 35),
+                               backgroundColor: .yellow.opacity(0.09),
+                               currentValueSuffix: " min")
                 
                 Text("\(Int(timerDuration)) minutes")
                     .font(.largeTitle)

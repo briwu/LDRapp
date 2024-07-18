@@ -32,7 +32,7 @@
 		FA9B523F2C33894800B2730A /* IndividualSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B523E2C33894800B2730A /* IndividualSessionView.swift */; };
 		FA9B52412C33895600B2730A /* DuoSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B52402C33895600B2730A /* DuoSessionView.swift */; };
 		FA9B52432C34B27800B2730A /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B52422C34B27800B2730A /* Color+Hex.swift */; };
-		FAAF9C342C3E32D000500B5C /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF9C332C3E32D000500B5C /* CircularSlider.swift */; };
+		FAAF9C372C48BDD300500B5C /* CircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = FAAF9C362C48BDD300500B5C /* CircularSlider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		FA9B523E2C33894800B2730A /* IndividualSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualSessionView.swift; sourceTree = "<group>"; };
 		FA9B52402C33895600B2730A /* DuoSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoSessionView.swift; sourceTree = "<group>"; };
 		FA9B52422C34B27800B2730A /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
-		FAAF9C332C3E32D000500B5C /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA41C6762C3268ED006BF90E /* FirebaseAuth in Frameworks */,
+				FAAF9C372C48BDD300500B5C /* CircularSlider in Frameworks */,
 				FA41C67C2C3268ED006BF90E /* FirebaseStorage in Frameworks */,
 				FA41C6782C3268ED006BF90E /* FirebaseFirestore in Frameworks */,
 				FA41C67A2C3268ED006BF90E /* FirebaseFirestoreSwift in Frameworks */,
@@ -182,7 +182,6 @@
 				FA41C6822C326AF6006BF90E /* InputView.swift */,
 				FA41C6842C326AFE006BF90E /* SettingsRowView.swift */,
 				FA9B52422C34B27800B2730A /* Color+Hex.swift */,
-				FAAF9C332C3E32D000500B5C /* CircularSlider.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -289,6 +288,7 @@
 				FA41C6772C3268ED006BF90E /* FirebaseFirestore */,
 				FA41C6792C3268ED006BF90E /* FirebaseFirestoreSwift */,
 				FA41C67B2C3268ED006BF90E /* FirebaseStorage */,
+				FAAF9C362C48BDD300500B5C /* CircularSlider */,
 			);
 			productName = ScreenRivalry;
 			productReference = FA41C6472C3265C0006BF90E /* ScreenRivalry.app */;
@@ -364,6 +364,7 @@
 			mainGroup = FA41C63E2C3265C0006BF90E;
 			packageReferences = (
 				FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FAAF9C352C48BDD300500B5C /* XCRemoteSwiftPackageReference "CircularSlider" */,
 			);
 			productRefGroup = FA41C6482C3265C0006BF90E /* Products */;
 			projectDirPath = "";
@@ -415,7 +416,6 @@
 				FA41C64D2C3265C0006BF90E /* ContentView.swift in Sources */,
 				FA9B52432C34B27800B2730A /* Color+Hex.swift in Sources */,
 				FA41C6912C326BE8006BF90E /* AuthViewModel.swift in Sources */,
-				FAAF9C342C3E32D000500B5C /* CircularSlider.swift in Sources */,
 				FA41C6972C326C41006BF90E /* User.swift in Sources */,
 				FA41C69B2C326CAA006BF90E /* SessionSelectionView.swift in Sources */,
 				FA41C68F2C326B8B006BF90E /* RegistrationView.swift in Sources */,
@@ -763,6 +763,14 @@
 				minimumVersion = 10.28.1;
 			};
 		};
+		FAAF9C352C48BDD300500B5C /* XCRemoteSwiftPackageReference "CircularSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/terlan98/CircularSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -785,6 +793,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA41C6742C3268ED006BF90E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		FAAF9C362C48BDD300500B5C /* CircularSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAF9C352C48BDD300500B5C /* XCRemoteSwiftPackageReference "CircularSlider" */;
+			productName = CircularSlider;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
