@@ -75,6 +75,7 @@ struct IndividualSessionView: View {
     @State private var timer: Timer?
     @State private var isTimerRunning = false
     @State private var appEnteredBackground = false
+    @State private var showAlert = false
     @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject private var timerViewModel = TimerViewModel()
@@ -133,6 +134,9 @@ struct IndividualSessionView: View {
                     timerDidFinish()
                 }
             }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Congratulations!"), message: Text("You have successfully completed your session."), dismissButton: .default(Text("OK")))
+            }
         }
     
     private func startTimer() {
@@ -145,6 +149,7 @@ struct IndividualSessionView: View {
         isTimerRunning = false
         if !appEnteredBackground {
             rewardUserWithCoins()
+            showAlert = true
         } else {
             print("Timer failed because the app entered the background.")
         }
