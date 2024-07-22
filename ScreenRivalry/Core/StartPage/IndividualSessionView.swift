@@ -18,6 +18,7 @@ class TimerViewModel: ObservableObject {
     @Published var timerValue: Int = 0
     var countdownDuration: Int = 0
     var timer: Timer?
+    var backgroundTask: UIBackgroundTaskIdentifier = .invalid
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleAppEnteringBackground), name: UIApplication.willResignActiveNotification, object: nil)
@@ -37,11 +38,13 @@ class TimerViewModel: ObservableObject {
                 self.stopTimer()
             }
         }
+        startBackgroundTask()
     }
     
     func stopTimer() {
         timer?.invalidate()
         timer = nil
+        endBackgroundTask()
     }
     
     func toggleTimer() {
@@ -58,11 +61,24 @@ class TimerViewModel: ObservableObject {
     }
     
     @objc func handleAppEnteringBackground() {
-        stopTimer()
+        startBackgroundTask()
     }
     
     @objc func handleAppEnteringForeground() {
         startTimer()
+    }
+    
+    private func startBackgroundTask() {
+        backgroundTask = UIApplication.shared.beginBackgroundTask(withName: "MyTimerTask") {
+            self.endBackgroundTask()
+        }
+    }
+    
+    private func endBackgroundTask() {
+        if backgroundTask != .invalid {
+            UIApplication.shared.endBackgroundTask(backgroundTask)
+            backgroundTask = .invalid
+        }
     }
 }
 
@@ -83,8 +99,8 @@ struct IndividualSessionView: View {
     let countdownDurations = [5, 10, 15, 20, 25]
     
     private var timerPublisher: Publishers.Autoconnect<Timer.TimerPublisher> {
-            Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        }
+        Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    }
     
     var body: some View {
             VStack {
@@ -121,9 +137,12 @@ struct IndividualSessionView: View {
             .onChange(of: scenePhase) {
                 if scenePhase == .background {
                     appEnteredBackground = true
-                    isTimerRunning = false // Stop the timer if the app goes to the background
-                } else if scenePhase == .active && !isTimerRunning {
+                    //isTimerRunning = false // Stop the timer if the app goes to the background && !isTimerRunning
+                    timerViewModel.handleAppEnteringBackground()
+                } else if scenePhase == .active {
                     // Optional: Handle returning to the foreground if needed
+                    timerViewModel.handleAppEnteringForeground()
+                    appEnteredBackground = false
                 }
             }
             .onReceive(timerPublisher) { _ in
