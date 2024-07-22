@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         if let user = viewModel.currentUser {
             List {
@@ -19,7 +20,7 @@ struct ProfileView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .frame(width: 72, height: 72)
-                            .background(Color(.systemGray3))
+                            .background(colorScheme == .dark ? Color(.systemGray6) : Color(.systemGray3))
                             .clipShape(Circle())
                         
                         VStack(alignment: .leading, spacing: 4) {
